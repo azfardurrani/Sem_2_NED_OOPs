@@ -6,5 +6,4 @@ int main()
     cout << "age: ";
     cin >> age;
     cout << "your age is " << age;
-
 }
