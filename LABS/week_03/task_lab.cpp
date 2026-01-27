@@ -1,4 +1,5 @@
 #include<iostream>
+#include<string>
 using namespace std;
 int main()
 {
@@ -11,6 +12,20 @@ int main()
         cout << n << " x " << i << " = " << i*n << endl;
     }
 // Q6) Write a C++ program to create a simple menu-driven calculator that performs basic arithmetic operations (addition, subtraction, multiplication, division).
+    string op;
+    int x;
+    int y;
+    cout << "choose any operation you would like to perform: (addition, subtraction, multiplication, division). " << endl;
+    cin >> op;
+    if (op == "addition") 
+    {
+        cout << "x: ";
+        cin >> x;
+        cout << "y: ";
+        cin >> y;
+        int z = x + y;
+        cout << "the sum is " << z;
+    }
 // Q7) Write a C++ program to generate the Fibonacci series up to a given number of terms.
 // Q8) Write a C++ program to implement a number guessing game where the user tries to guess a randomly generated number.
 // Q9) Write a C++ program to implement a simple rock, paper, scissors game between the user and the computer.
