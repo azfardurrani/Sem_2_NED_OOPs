@@ -1,6 +1,18 @@
 #include<iostream>
 #include<string>
 using namespace std;
+int add(int a, int b)
+    {
+        return a + b;
+    }
+// factorial function
+    int fact(int n)
+{
+    int f = 1;
+    for (int i = 1; i <= n; i++)
+    f = f*i;
+    return f;
+}
 int main()
 {
 // Q5) Write a C++ program to generate the multiplication table of a given number.
@@ -13,6 +25,8 @@ int main()
     }
 // Q6) Write a C++ program to create a simple menu-driven calculator that performs basic arithmetic operations (addition, subtraction, multiplication, division).
     string op;
+    
+    
     int x;
     int y;
     cout << "choose any operation you would like to perform: (addition, subtraction, multiplication, division). " << endl;
@@ -23,8 +37,8 @@ int main()
         cin >> x;
         cout << "y: ";
         cin >> y;
-        int z = x + y;
-        cout << "the sum is " << z;
+        
+        cout << "the sum is " << fact(x);
     }
 // Q7) Write a C++ program to generate the Fibonacci series up to a given number of terms.
 // Q8) Write a C++ program to implement a number guessing game where the user tries to guess a randomly generated number.
