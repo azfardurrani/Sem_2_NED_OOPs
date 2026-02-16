@@ -30,10 +30,6 @@
 
 //     return 0;
 // }
-
-
-
-
 //Question no 2
 #include <iostream>
 using namespace std;
