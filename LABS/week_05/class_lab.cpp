@@ -1,7 +1,6 @@
-
-// //question no 1
-// #include <iostream>
-// using namespace std;
+//question no 1
+#include <iostream>
+using namespace std;
 
 // // function to swap values using pointers
 // void swap(int* a, int* b) {
@@ -11,25 +10,26 @@
 //     *b = temp;
 // }
 
-// int main() {
-//     int x, y;
+int main() {
+    int x, y;
 
-//     cout << "Enter x : ";
-//     cin >> x;
+    cout << "Enter x : ";
+    cin >> x;
+    int *y = &x;
+    cout << "Enter y : ";
+    cin >> y;
+    int *x = &x;
+    cout << "\nBefore swapping:\n";
+    cout << "x = " << x << ", y = " << y << endl;
 
-//     cout << "Enter y : ";
-//     cin >> y;
+    swap(&x, &y);
 
-//     cout << "\nBefore swapping:\n";
-//     cout << "x = " << x << ", y = " << y << endl;
+    cout << "\nAfter swapping:\n";
+    cout << "x = " << *x << ", y = " << *y << endl;
 
-//     swap(&x, &y);
+    return 0;
+}
 
-//     cout << "\nAfter swapping:\n";
-//     cout << "x = " << x << ", y = " << y << endl;
-
-//     return 0;
-// }
 //Question no 2
 #include <iostream>
 using namespace std;
@@ -75,121 +75,121 @@ int main() {
     return 0;
 }
  
-//question 3
-// #include <stdio.h>
+// //question 3
+// // #include <stdio.h>
 
-// // function that returns pointer to maximum element
-// #include <iostream>
-// using namespace std;
+// // // function that returns pointer to maximum element
+// // #include <iostream>
+// // using namespace std;
 
-// int* findMax(int* arr, int size) {
-//     int* max = arr;   // pointer to first element
+// // int* findMax(int* arr, int size) {
+// //     int* max = arr;   // pointer to first element
 
-//     for (int i = 1; i < size; i++) {
-//         if (*(arr + i) > *max) {
-//             max = arr + i;
-//         }
-//     }
-//     return max;
-// }
+// //     for (int i = 1; i < size; i++) {
+// //         if (*(arr + i) > *max) {
+// //             max = arr + i;
+// //         }
+// //     }
+// //     return max;
+// // }
 
-// int main() {
-//     int arr[100], n;
-//     int* maxPtr;
+// // int main() {
+// //     int arr[100], n;
+// //     int* maxPtr;
 
-//     cout << "Enter number of elements: ";
-//     cin >> n;
-//     cout << "Enter " << n << " elements:\n";
-//     for (int i = 0; i < n; i++) {
-//         cin >> arr[i];
-//     }
-//     maxPtr = findMax(arr, n);
+// //     cout << "Enter number of elements: ";
+// //     cin >> n;
+// //     cout << "Enter " << n << " elements:\n";
+// //     for (int i = 0; i < n; i++) {
+// //         cin >> arr[i];
+// //     }
+// //     maxPtr = findMax(arr, n);
 
-//     cout << "\nMaximum value: " << *maxPtr << endl;
-//     cout << "Address of maximum element: " << maxPtr << endl;
+// //     cout << "\nMaximum value: " << *maxPtr << endl;
+// //     cout << "Address of maximum element: " << maxPtr << endl;
 
-//     return 0;
-// }
-
-
+// //     return 0;
+// // }
 
 
 
-//question 4
-// #include <iostream>
-// using namespace std;
 
-// int removeDuplicates(int arr[], int n) {
-//     if (n == 0 || n == 1) return n;
 
-//     int newSize = 0; 
+// //question 4
+// // #include <iostream>
+// // using namespace std;
 
-//     for (int i = 0; i < n; i++) {
-//         bool isDuplicate = false;
-//         for (int j = 0; j < newSize; j++) {
-//             if (arr[i] == arr[j]) {
-//                 isDuplicate = true;
-//                 break;
-//             }
-//         }
-//         if (!isDuplicate) {
-//             arr[newSize] = arr[i];
-//             newSize++;
-//         }
-//     }
-//     return newSize;
-// }
+// // int removeDuplicates(int arr[], int n) {
+// //     if (n == 0 || n == 1) return n;
 
-// int main() {
-//     int n;
-//     cout << "Enter the size of the array: ";
-//     cin >> n;
+// //     int newSize = 0; 
 
-//     int arr[n];
-//     cout << "Enter " << n << " integers:\n";
-//     for (int i = 0; i < n; i++)
-//         cin >> arr[i];
+// //     for (int i = 0; i < n; i++) {
+// //         bool isDuplicate = false;
+// //         for (int j = 0; j < newSize; j++) {
+// //             if (arr[i] == arr[j]) {
+// //                 isDuplicate = true;
+// //                 break;
+// //             }
+// //         }
+// //         if (!isDuplicate) {
+// //             arr[newSize] = arr[i];
+// //             newSize++;
+// //         }
+// //     }
+// //     return newSize;
+// // }
 
-//     n = removeDuplicates(arr, n);
+// // int main() {
+// //     int n;
+// //     cout << "Enter the size of the array: ";
+// //     cin >> n;
 
-//     cout << "Array after removing duplicates: ";
-//     for (int i = 0; i < n; i++)
-//         cout << arr[i] << " ";
-//     cout << endl;
+// //     int arr[n];
+// //     cout << "Enter " << n << " integers:\n";
+// //     for (int i = 0; i < n; i++)
+// //         cin >> arr[i];
 
-//     return 0;
-// }
+// //     n = removeDuplicates(arr, n);
 
-//question 5
-// #include <iostream>
-// #include <cstring>
-// using namespace std;
+// //     cout << "Array after removing duplicates: ";
+// //     for (int i = 0; i < n; i++)
+// //         cout << arr[i] << " ";
+// //     cout << endl;
 
-// bool isPalindrome(const char* str) {
-//     const char* start = str;
-//     const char* end = str + strlen(str) - 1;
+// //     return 0;
+// // }
 
-//     while (start < end) {
-//         if (*start != *end)
-//             return false;
-//         start++;
-//         end--;
-//     }
-//     return true;
-// }
+// //question 5
+// // #include <iostream>
+// // #include <cstring>
+// // using namespace std;
 
-// int main() {
-//     char str[100];
-//     cout << "Enter a string: ";
-//     cin >> str;
+// // bool isPalindrome(const char* str) {
+// //     const char* start = str;
+// //     const char* end = str + strlen(str) - 1;
 
-//     if (isPalindrome(str))
-//         cout << "\"" << str << "\" is a palindrome.\n";
-//     else
-//         cout << "\"" << str << "\" is not a palindrome.\n";
+// //     while (start < end) {
+// //         if (*start != *end)
+// //             return false;
+// //         start++;
+// //         end--;
+// //     }
+// //     return true;
+// // }
 
-//     return 0;
-// }
+// // int main() {
+// //     char str[100];
+// //     cout << "Enter a string: ";
+// //     cin >> str;
+
+// //     if (isPalindrome(str))
+// //         cout << "\"" << str << "\" is a palindrome.\n";
+// //     else
+// //         cout << "\"" << str << "\" is not a palindrome.\n";
+
+// //     return 0;
+// // }
 
 
 

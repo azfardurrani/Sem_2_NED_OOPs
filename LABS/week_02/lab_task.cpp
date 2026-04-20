@@ -16,8 +16,8 @@ int main ()
     string word = "hello";
     reverse(word.begin(), word.end());
     cout << word << endl;
-
-// Question 6: Check Prime Number: Write a C++ program to check if a given number is prime or not.
+    
+// Question 6: Check Prime  Number: Write a C++ program to check if a given number is prime or not.
 // Expected Output: 7 is prime
     int n = 7;
     int count = 0;
